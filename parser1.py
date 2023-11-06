@@ -34,7 +34,7 @@ class SJ(BaseParser):
 
     def __init__(self):
         self.url = 'https://api.superjob.ru/2.0/vacancies/'
-        self.headers = {'X-Api-App-Id': os.getenv('SJ_KEY')}
+        self.headers = {'X-Api-App-Id': 'v3.r.120818960.416e8a50a0823fad0f08e71779d3cc0683000274.f70b011acaea2943591b6a3a5fe45297c822a8b3'}
         self.params = {'keyword': '', 'count': 100, 'page': 0}
 
     def get_vacancies(self, keyword):
