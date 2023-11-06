@@ -10,6 +10,8 @@ class Vacancy:
         self.currency = currency
 
     def to_dict(self):
+        """Преобразует объект класса Vacancy в словарь"""
+
         vacancy = {
             "name": self.name,
             "salary_from": self.salary_from,
@@ -23,8 +25,10 @@ class Vacancy:
     def __lt__(self, other):
         """Метод сравнения вакансий по зарплате"""
 
-        if other.salary_from is None or self.salary_from is None:
+        if other.salary_from is None:
             return False
+        if self.salary_from is None:
+            return True
         return self.salary_from < other.salary_from
 
     def __str__(self):
